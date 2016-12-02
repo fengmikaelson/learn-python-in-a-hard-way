@@ -3,22 +3,24 @@
 # @Author: anchen
 # @Date:   2016-11-07 11:04:27
 # @Last Modified by:   anchen
-# @Last Modified time: 2016-11-07 15:17:26
-from bs4 import BeautifulSoup
+# @Last Modified time: 2016-11-29 09:46:36
+print("Mary had a little lamb")
+print("Its fleece was white as $s."'snow')
+print("And everywhere that Mary went.")
+print("."*10)
 
-def parse_html(html):
-    soup=BeautifulSoup(html)
+end1="C"
+end2="h"
+end3="e"
+end4="e"
+end5="s"
+end6="e"
+end7="B"
+end8="u"
+end9="r"
+end10="g"
+end11="e"
+end12="r"
 
-    movie_list_soup=soup.find('ol',attrs={'class':'grid_view'})
-
-    movie_name_list=[]
-
-    for movie_li in movie_list_soup.find_all('li'):
-        detail=movie_li.find('div',attrs={'class':'hd'})
-        movie_name=detail.find('span',attrs={'class':'title'}).getText()
-        
-        movie_name_list.append(movie_name)
-    next_page=soup.find('span',attrs={'class':'netx'}).find('a')
-    if next_page:
-        return movie_name_list,DOWNLOAD_URL+next_page['href']
-    return movie_name_list,None
+print(end1+end2+end3+end4+end5+end6,)
+print(end7+end8+end9+end10+end11+end12)

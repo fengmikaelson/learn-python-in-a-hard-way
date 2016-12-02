@@ -3,17 +3,25 @@
 # @Author: anchen
 # @Date:   2016-11-03 14:24:12
 # @Last Modified by:   anchen
-# @Last Modified time: 2016-11-07 11:00:50
-import requests
+# @Last Modified time: 2016-11-29 09:37:39
 
-DOWNLOAD_URL='http://movie.douban.com/top250'
+x="there are %d types of people." %10
+binary="binary"
+do_not="don't"
+y="those who know %s and those who %s."%(binary,do_not)
 
-def download_page(url):
-    data=requests.get(url).content
-    return data
+print (x)
+print (y)
 
-def main():
-    print (download_page(DOWNLOAD_URL))
+print("i said:%r." %x)
+print("i also said:'%s'." %y)
 
-if __name__=="__main__":
-    main()
+hilarious=False
+joke_evaluation="isn't that joke so funny?!%r"
+
+print(joke_evaluation%hilarious)
+
+w="this is the left side of..."
+e="a string with a right sied."
+
+print (w+e)
