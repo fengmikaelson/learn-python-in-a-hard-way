@@ -3,13 +3,18 @@
 # @Author: anchen
 # @Date:   2016-11-29 15:00:06
 # @Last Modified by:   fengm
-# @Last Modified time: 2016-12-01 13:59:19
-from sys import argv
+# @Last Modified time: 2016-12-07 14:48:26
 
-script,filename=argv
 
-txt=open(filename,"w")
-print("here's your file %s"%filename)
+def while_function(i, increment):
+    j = 0
+    numbers = []
 
-print(txt.read())
+    while j < i:
+        numbers.append(j)
+        j += increment
 
+    return numbers
+
+
+print(while_function(6, 2))
