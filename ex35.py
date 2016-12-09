@@ -2,7 +2,7 @@
 # @Author: fengm
 # @Date:   2016-12-07 15:32:54
 # @Last Modified by:   fengm
-# @Last Modified time: 2016-12-08 14:30:28
+# @Last Modified time: 2016-12-09 10:39:26
 from sys import exit
 
 
@@ -10,13 +10,15 @@ def gold_room():
     print("this room is full of gold.how much do you take?")
 
     next = input(">")
-    if "0" in next or "1" in next:
+#isdigit() 方法检测字符串是否只由数字组成。如果字符串只包含数字则返回 True 否则返回 False。
+    if next.isdigit():
         how_much = int(next)
     else:
         dead("man,learn to type a number.")
 
     if how_much < 50:
         print("nice,you're not greedy,you win!")
+        #exit(0)表示正常退出，exit(1)表示发生了错误
         exit(0)
     else:
         dead("you greedy bastard!")
@@ -28,7 +30,7 @@ def bear_room():
     print("the fat bear is in front of another door.")
     print("how are you going to move the bear?")
     bear_moved = False
-
+    #只有在循环永不停止时使用while，其他类型的循环都是用for循环尤其是在对象数量固定或者有限的情况下
     while True:
         next = input(">")
 
