@@ -2,7 +2,7 @@
 # @Author: fengm
 # @Date:   2016-12-09 10:39:58
 # @Last Modified by:   fengm
-# @Last Modified time: 2016-12-09 14:20:26
+# @Last Modified time: 2016-12-09 14:33:47
 """
 石头剪刀布...只能想到这么简单的东西了
 """
@@ -43,8 +43,9 @@ def roshambo():
             print("computer wins")
             dead("fuck you loser")
 
+
 def dead(why):
-	print(why,"goodbye")
-	exit(0)
+    print(why, "goodbye")
+    exit(0)
 
 start()
